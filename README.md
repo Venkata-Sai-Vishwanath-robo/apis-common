@@ -15,7 +15,7 @@ $ mvn javadoc:javadoc
 The API specification is created in apis-common/target/site/apidocs/.  
 
 ## License
-&emsp;[Apache License Version 2.0](https://github.com/SonyCSL/apis-common/blob/master/LICENSE)
+&emsp;[Apache License Version 2.0](https://github.com/hyphae/apis-common/blob/master/LICENSE)
 
 ## Notice
-&emsp;[Notice](https://github.com/SonyCSL/apis-common/blob/master/NOTICE.md)
+&emsp;[Notice](https://github.com/hyphae/apis-common/blob/master/NOTICE.md)
