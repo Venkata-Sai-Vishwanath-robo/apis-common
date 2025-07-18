@@ -123,9 +123,10 @@ public class MulticastHandler extends Handler {
 	private synchronized void connect_() throws IOException {
 		sendAddress = InetAddress.getByName(groupAddress);
 		sock = new MulticastSocket(port);
-		NetworkInterface networkInterface = NetworkInterface.getByInetAddress(InetAddress.getLocalHost());
+		InetAddress localHost = InetAddress.getLocalHost();
+		NetworkInterface networkInterface = NetworkInterface.getByInetAddress(localHost);
 		if (networkInterface == null) {
-			throw new IOException("No network interface found for: " + InetAddress.getLocalHost());
+			throw new IOException("No network interface found for: " + localHost);
 		}
 		sock.joinGroup(new InetSocketAddress(sendAddress, port), networkInterface);
 		sock.setTimeToLive(1);
